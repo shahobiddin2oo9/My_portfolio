@@ -1,0 +1,50 @@
+.h11 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 54px;
+  color: rgba(9, 9, 224, 0.915);
+  padding: 25px 55px;
+}
+.cards_1 {
+  width: 340px;
+  padding: 32px 24px;
+  background-image: url(../components/card/yuldiz.jpg);
+  border-radius: 16px;
+  margin: 0 auto;
+  height: 500px;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background-color: rgba(17, 14, 163, 0.941);
+    opacity: 1;
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.form_tag {
+  max-width: 470px;
+  background-color: #0022ffb5;
+  padding: 25px;
+  border-radius: 14px;
+  margin: 40px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container_2 {
+  background-image: url(../components/card/IT.png);
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.445);
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 24px;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

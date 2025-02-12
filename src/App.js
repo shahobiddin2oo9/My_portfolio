@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import LoginPage from "./pages/LoginPage";
+import { ToastContainer } from "react-toastify";
+import Layout from "./components/layout";
+import DebtsPage from "./pages/DebtsPage";
+import HomePage from "./pages/HomePage";
+import Transaction from "./pages/TransactionPage";
 
 function App() {
+  const [debts, setDebts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route
+            path="/home"
+            element={<HomePage debts={debts} setDebts={setDebts} />}
+          />
+          <Route
+            path="/debts"
+            element={<DebtsPage debts={debts} setDebts={setDebts} />}
+          />
+          <Route path="/transaction" element={<Transaction />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

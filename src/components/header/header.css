@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+}
+.hdr {
+  padding: 20px 0 25px;
+  background-color: #08415e;
+  box-shadow: rgba(0, 0, 0, 0.686) 0px 50px 100px -20px,
+    rgb(0, 0, 0) 0px 30px 60px -30px,
+    rgba(4, 32, 61, 0.856) 0px -2px 6px 0px inset;
+  padding: 20px 0 0x;
+  position: sticky;
+  top: 0;
+}

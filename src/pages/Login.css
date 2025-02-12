@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.form {
+  background-color: rgba(239, 237, 237, 0.432);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.674) 0px 8px 16px -8px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 35px;
+}
+.logo {
+  position: relative;
+  h1 {
+    letter-spacing: -1px;
+    font-family: "Kanit";
+    font-size: 32px;
+    margin: 0;
+    color: rgba(13, 13, 168, 0.815);
+  }
+
+  span {
+    position: absolute;
+    font-size: 19px;
+    top: 25px;
+    right: 0;
+    font-weight: 700;
+    color: rgb(0, 0, 113);
+  }
+}
+.menu {
+  max-width: 900px;
+  overflow: hidden;
+}
+p {
+  margin: 0 !important;
+  padding: 10px;
+  font-size: 22px;
+  color: rgba(0, 0, 184, 0.815);
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: 10s linear infinite slidein;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0 65px;
+  }
+  .hamburger {
+    display: block;
+  }
+  p {
+    font-size: 18px;
+    animation: 8s linear infinite slidein;
+    margin-top: 5px !important;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+main {
+  background-color: #0061e086;
+  padding: 100px 0;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  a {
+    max-width: 700px;
+    display: inline-block;
+    color: black;
+    font-size: 54px;
+    font-weight: 900;
+    text-align: start;
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: none;
+  }
+  h3 {
+    max-width: 500px;
+    color: #000000;
+    font-size: 34px;
+  }
+}
+.img {
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 20px;
+  .my_img {
+    width: 100%;
+    border-radius: 50px;
+    transition: all ease-in 0.5s;
+    cursor: pointer;
+  }
+}
+.my_img {
+  max-width: 500px;
+  border-radius: 50px;
+  transition: all ease-in 0.5s;
+  cursor: pointer;
+}
+.my_img:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 472px) {
+  .text {
+    a {
+      font-size: 44px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 392px) {
+  .text {
+    a {
+      font-size: 34px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 1075px) {
+  .text {
+    a {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+  .main {
+    flex-direction: column;
+  }
+}
